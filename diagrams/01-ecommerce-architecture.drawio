@@ -1,0 +1,188 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="ecommerce" name="E-commerce Architecture">
+    <mxGraphModel dx="2361" dy="765" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1170" pageHeight="650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="container" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="410" width="240" x="870" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="user" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Online user" vertex="1">
+          <mxGeometry height="60" width="30" x="60" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="channel" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Channel&lt;br&gt;&lt;br&gt;Mobile / Website" vertex="1">
+          <mxGeometry height="60" width="120" x="180" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="service" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="E-commerce Service" vertex="1">
+          <mxGeometry height="60" width="120" x="440" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="whatsapp" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Channel&lt;br&gt;&lt;br&gt;Whatsapp" vertex="1">
+          <mxGeometry height="60" width="120" x="20" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="campaigns" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Campaigns" vertex="1">
+          <mxGeometry height="80" width="140" x="230" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="products" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Products" vertex="1">
+          <mxGeometry height="80" width="140" x="430" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="customers" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Customer interactions&lt;br&gt;and profiles" vertex="1">
+          <mxGeometry height="80" width="140" x="640" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="aisec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="AI for security and guardrails" vertex="1">
+          <mxGeometry height="60" width="180" x="900" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="rfm" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="RFM, CLV, Segmentation models" vertex="1">
+          <mxGeometry height="60" width="180" x="900" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="churn" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Churn detection model&lt;br&gt;(Domain-specific)" vertex="1">
+          <mxGeometry height="60" width="180" x="900" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="segments" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Segments" vertex="1">
+          <mxGeometry height="60" width="120" x="510" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="rec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Recommendation Engine&lt;br&gt;&lt;br&gt;Fixed - rules" vertex="1">
+          <mxGeometry height="100" width="370" x="280" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="channel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="channel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="service" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=0.25;exitY=1.0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="campaigns">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="125" />
+              <mxPoint x="300" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="campaigns" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=0.5;exitY=0.0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.167;entryY=1.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="channel">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="145" />
+              <mxPoint x="200" y="145" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="campaigns" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="whatsapp">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="185" y="220" />
+              <mxPoint x="185" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="whatsapp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=0.458;exitY=0.0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="service" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="products">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="service" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="customers">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="70" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="segments" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=0.667;exitY=0.0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.0;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" target="service">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="85" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="segments" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="campaigns">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="rfm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.571;entryY=1.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="customers">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="990" y="290" />
+              <mxPoint x="720" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="aisec" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.0;entryY=0.688;entryDx=0;entryDy=0;entryPerimeter=0;" target="customers">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="80" />
+              <mxPoint x="850" y="235" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="churn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="segments">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="350" />
+              <mxPoint x="660" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="customers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=0.357;exitY=1.0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.0;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=0;" target="rec">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="rec" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=0.0;exitY=0.2;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=1.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="whatsapp">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="segments" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.784;entryY=0.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="rec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="churn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1.0;entryDx=0;entryDy=0;entryPerimeter=0;" target="rec">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="990" y="580" />
+              <mxPoint x="465" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl0" parent="1" style="text;html=1;align=center;verticalAlign=middle;labelBackgroundColor=default;fontSize=11;" value="Create / list campaigns" vertex="1">
+          <mxGeometry height="16" width="153" x="309" y="117" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl1" parent="1" style="text;html=1;align=center;verticalAlign=middle;labelBackgroundColor=default;fontSize=11;" value="Home page offers / Fixed" vertex="1">
+          <mxGeometry height="16" width="159" x="421" y="142" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl2" parent="1" style="text;html=1;align=center;verticalAlign=middle;labelBackgroundColor=default;fontSize=11;" value="Carts (completed/abandoned)" vertex="1">
+          <mxGeometry height="16" width="177" x="621" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl3" parent="1" style="text;html=1;align=center;verticalAlign=middle;labelBackgroundColor=default;fontSize=11;" value="Last purchased order, last login date" vertex="1">
+          <mxGeometry height="16" width="239" x="590" y="137" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl4" parent="1" style="text;html=1;align=center;verticalAlign=middle;labelBackgroundColor=default;fontSize=11;" value="Scan for guardrails" vertex="1">
+          <mxGeometry height="16" width="128" x="751" y="244" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl5" parent="1" style="text;html=1;align=center;verticalAlign=middle;labelBackgroundColor=default;fontSize=11;" value="Segmentation" vertex="1">
+          <mxGeometry height="16" width="84" x="813" y="282" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl6" parent="1" style="text;html=1;align=center;verticalAlign=middle;labelBackgroundColor=default;fontSize=11;" value="ETL job 24 hours" vertex="1">
+          <mxGeometry height="16" width="109" x="735" y="342" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl7" parent="1" style="text;html=1;align=left;verticalAlign=middle;labelBackgroundColor=default;fontSize=11;" value="Abandon Carts NBA" vertex="1">
+          <mxGeometry height="16" width="115" x="700" y="454" as="geometry" />
+        </mxCell>
+        <mxCell id="Q3_DHKoi6ZoPF6lwjFJQ-1" edge="1" parent="1" source="lbl8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;defaultLabelBackgroundColor=gap;" target="rec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl8" parent="1" style="text;html=1;align=left;verticalAlign=middle;labelBackgroundColor=default;fontSize=11;" value="Scan last 24 hours,&lt;br&gt;and send msg to&lt;br&gt;WA" vertex="1">
+          <mxGeometry height="48" width="128" x="735" y="486" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl9" parent="1" style="text;html=1;align=center;verticalAlign=middle;labelBackgroundColor=default;fontSize=11;" value="Abandon cart notification" vertex="1">
+          <mxGeometry height="16" width="165" x="-32" y="392" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
