@@ -35,7 +35,7 @@ Start with `docs/01-framing.md`, then read the ADRs it links to.
 
 ## Progress
 
-- [x] Session 1: Architecture views, steps and process
+- [x] Session 1: Architecture views, steps and process ([Mini Project 1: Governance Pack](docs/mini-project-1-governance.md))
 - [ ] Session 2: AI system building blocks
 - [ ] Session 3: LLM & RAG architecture
 - [ ] Session 4: Agentic AI architecture

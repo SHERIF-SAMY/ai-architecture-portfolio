@@ -24,9 +24,15 @@
 ## 4. Architecture principles
 <!-- 5 principles, each linked to a business goal (this is also Mini Project 1). -->
 
-| # | Principle | Why (business goal) | What it means in practice |
-|---|---|---|---|
-| P1 | | | |
+See [Mini Project 1: Governance Pack](mini-project-1-governance.md) for the full table.
+
+| # | Principle | Why (business goal) |
+|---|---|---|
+| P1 | Customer data stays in-country | Compliance (PDPL) |
+| P2 | Guardrails on every customer-facing AI output | Trust, CSAT 60% → 80% |
+| P3 | Baseline, target and A/B test per use case | Prove the CSAT goal |
+| P4 | Human approval for agent actions reaching customers | Reduce risk |
+| P5 | Freshness matched to need | Control cost |
 
 ## 5. To-be architecture
 ![To-be](../diagrams/01-to-be.png)
@@ -45,4 +51,6 @@
 <!-- For each: trigger, data needed, freshness (real-time / near-real-time / batch), success metric. -->
 
 ## 8. Decisions
-<!-- Link the ADRs, e.g. [ADR-0001](../adr/0001-....md) -->
+- [ADR-0001: Abandoned-cart detection with a 15-minute batch job](../adr/0001-abandoned-cart-detection.md)
+- [ADR-0002: Route campaign LLM calls by data classification](../adr/0002-llm-hosting-for-campaigns.md)
+- [ADR-0003: Inline safety check on agent messages](../adr/0003-agent-message-safety-check.md)
