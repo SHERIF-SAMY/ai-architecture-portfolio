@@ -54,3 +54,4 @@ See [Mini Project 1: Governance Pack](mini-project-1-governance.md) for the full
 - [ADR-0001: Abandoned-cart detection with a 15-minute batch job](../adr/0001-abandoned-cart-detection.md)
 - [ADR-0002: Route campaign LLM calls by data classification](../adr/0002-llm-hosting-for-campaigns.md)
 - [ADR-0003: Inline safety check on agent messages](../adr/0003-agent-message-safety-check.md)
+- [ADR-0004: Precomputed top-K for "Frequently bought together"](../adr/0004-fbt-precomputed-top-k.md)
