@@ -27,7 +27,7 @@ other customers often buy *with* it (case, charger, screen protector) to raise b
 | Latency (P95) | ~10–30 ms (key lookup) | ~80–150 ms (embed + ANN + rank) | 200 ms – seconds (joins on orders) |
 | Cost | Low: one nightly job + Redis | High: vector DB and embedding compute sized for 1000 RPS | Low infra, but DB must be scaled up |
 | Ops DB load | ~0 (one 4-row PK lookup) | ~0 | **Very high**, hurts checkout itself |
-| Quality | Real complements ("bought with") | Similar items = **substitutes** (another phone), wrong for this widget | Good, but fresh only matters little |
+| Quality | Real complements ("bought with") | Similar items = **substitutes** (another phone), wrong for this widget | Good, but the extra freshness adds little value |
 
 **Decision: A** ([ADR-0004](../adr/0004-fbt-precomputed-top-k.md)). "Bought together" changes slowly, so a nightly
 list is fresh enough; it is the fastest, cheapest and keeps the Ops DB safe. Fallback on timeout: category best-sellers.
